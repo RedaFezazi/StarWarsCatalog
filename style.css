@@ -4,11 +4,17 @@
   box-sizing: border-box;
   font-family: "General Sans", sans-serif;
 }
-header {
+body {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
   background: url(./assets/background.webp) no-repeat center/cover;
+}
+
+header {
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,17 +44,18 @@ h3 {
 
 .button {
   align-self: flex-start;
-  margin-left: 7rem;
+  margin-left: 2.5rem;
 }
 
 #details {
+  width: 100%;
   display: flex;
   gap: 1rem;
   height: 250px;
 }
 
 .window {
-  width: 250px;
+  flex: 1;
   border-radius: 20px;
   color: black;
   padding: 1rem;

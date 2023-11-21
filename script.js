@@ -25,15 +25,11 @@ const leftButton = document.querySelector("#left");
 const rightButton = document.querySelector("#right");
 let count = 1;
 
-leftButton.disabled = true;
-rightButton.disabled = true;
-
 const fetchChars = (num) => {
+  leftButton.disabled = true;
+  rightButton.disabled = true;
   list.style.background = "url(./assets/loading.gif) no-repeat center/cover";
   list.innerHTML = "";
-  rightButton.disabled = false;
-  leftButton.disabled = count === 1;
-  rightButton.disabled = count === 9;
 
   fetch(`https://swapi.dev/api/people/?page=${num}`)
     .then((response) => {
@@ -43,13 +39,18 @@ const fetchChars = (num) => {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
+      list.style.background = "";
+
       for (let item of data.results) {
         let pElement = document.createElement("button");
         let textNode = document.createTextNode(`${item.name}`);
         pElement.onclick = () => fetchData(item.url);
         pElement.appendChild(textNode);
         list.appendChild(pElement);
+        leftButton.disabled = true;
+        rightButton.disabled = true;
+        leftButton.disabled = count === 1;
+        rightButton.disabled = count === 9;
       }
     })
     .catch((error) => console.error("Error:", error));
