@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="heading">
+        <h1>STAR WARS CATALOG</h1>
+      </div>
+
+      <div id="details">
+        <div id="list" class="window"></div>
+        <div id="person" class="window">
+          <h2>Name:</h2>
+          <h4 id="name"></h4>
+          <p id="height"></p>
+          <p id="Mass"></p>
+          <p id="hairColor"></p>
+          <p id="skinColor"></p>
+          <p id="eyeColor"></p>
+          <p id="birthYear"></p>
+          <p id="gender"></p>
+        </div>
+
+        <div id="planet" class="window">
+          <h2>Planet Name:</h2>
+          <h4 id="planetName"></h4>
+          <p id="rotationPeriod"></p>
+          <p id="orbitalPeriod"></p>
+          <p id="diameter"></p>
+          <p id="climate"></p>
+          <p id="gravity"></p>
+          <p id="terrain"></p>
+        </div>
+      </div>
+      <div class="button">
+        <button id="left">Previous</button>
+        <button id="right">Next</button>
+      </div>
+    </header>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
