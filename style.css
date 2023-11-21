@@ -21,9 +21,9 @@ header {
   justify-content: center;
 }
 .heading {
-  font-size: 1.5rem;
+  font-size: 2rem;
   background-color: rgba(0, 0, 0, 0.74);
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   color: white;
   padding: 1rem;
   border-radius: 1rem;
@@ -40,11 +40,13 @@ h3 {
   display: inline;
   width: 5rem;
   border: 1.5px solid black;
+  padding: 0.5rem;
+  font-weight: 600;
 }
 
 .button {
   align-self: flex-start;
-  margin-left: 2.5rem;
+  margin-left: 4rem;
 }
 
 #details {
@@ -61,6 +63,7 @@ h3 {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.801);
   border: 2px solid black;
+  text-align: center;
 }
 
 #list button {
